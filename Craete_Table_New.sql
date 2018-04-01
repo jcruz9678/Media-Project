@@ -3,6 +3,7 @@ CREATE Table Type (
         Movie longblob not null,
         Tv_Show longblob not null,
         Pictures longblob not null,
+	document longblob not null,
         User_Define_Media_Id int UNSIGNED  null,
 		
 		FOREIGN KEY (User_Define_Media_Id)
