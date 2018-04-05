@@ -18,11 +18,14 @@
 	 
 	 <!--Javascript Files-->
 	 <script src="scripts/login.js"></script>
-	 <script type="text/javascript" src='scripts/index.js'></script>
+	 <script type='text/javascript' src='scripts/index.js'></script>
 	 
+	<!--php Files-->
+	<?php require 'http://localhost/scripts/login.php'; ?>
 
 </head>
 <body>
+
 	<!--Login Modal-->
 	<div class="modal fade" id="loginForm">
 		<div class="modal-dialog">
@@ -32,7 +35,7 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form action="/login.php">
+					<form action="scripts/login_proccess.php" method ="post">
 						<div class="form-group">
 							<label for="username"><b>User Name</b></label>
 							<input type="email" class="form-control" placeholder="Email" name="username" required>

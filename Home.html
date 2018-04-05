@@ -1,3 +1,10 @@
+<?php
+	include('../scripts/session.php');
+	
+	if(empty($login_session)_ {
+		header("Location: ../index.html");
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -149,7 +156,8 @@
                 </ul>
             </nav>
 
-            <!-- Page Content Holder -->
+            
+			
             <div id="content">
 					<!--Navbar-->
 					<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -173,13 +181,17 @@
 								</form>
 								<ul class="nav navbar-nav navbar-right">
 										<li class='nav-item'>
+										   Hello 
+											
+										</li>
+										<li class='nav-item'>
 										   <a class="nav-link" href="#" data-toggle="modal" data-target="#myAccountForm">
 											  <i class="fas fa-user-circle"></i>
-													My Account
+													Account <?php echo $login_session; ?>,
 											</a>
-										</li>
+										</li>	
 										<li class="nav-item">
-										   <a class="nav-link" href="#">
+										   <a class="nav-link" href="scripts/logout.php">
 										   		<i class="fas fa-sign-out-alt"></i>
 											  		Log Out
 											</a>

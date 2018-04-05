@@ -1,11 +1,10 @@
+
 <?php
+$hostname = 'localhost';
+$dbname = 'user';
+$username = 'root';
+$password = 'hershey22';
 
-$user = 'root';
-$pass = '';
-$db = 'media_db';
-
-$db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
-
-echo "Success";
-
+$link = mysqli_connect($hostname, $username, $password) or die ('Connection to host has failed.');
+mysqli_select_db($link, $dbname) or die ('Database name is not available.');
 ?>
